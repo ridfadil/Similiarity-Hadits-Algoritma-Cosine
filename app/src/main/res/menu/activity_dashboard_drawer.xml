@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/tambah_hadits"
+            android:icon="@drawable/add"
+            android:title="Tambah Hadits" />
+        <item
+            android:id="@+id/lihat_hadits"
+            android:icon="@drawable/books"
+            android:title="Lihat Hadits" />
+        <item
+            android:id="@+id/tentang"
+            android:icon="@drawable/ask"
+            android:title="Tentang" />
+    </group>
+
+
+</menu>

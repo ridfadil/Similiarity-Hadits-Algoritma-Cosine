@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cd_hadis"
+        android:layout_margin="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:background="@color/colorGrey"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Jenis Hadits : " />
+
+            <TextView
+                android:id="@+id/tv_jenis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Hadits Tentang Kebaersihan" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/colorPrimary" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Hadits Pertama : " />
+
+            <TextView
+                android:id="@+id/tv_hadits_satu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Kebersihan sebagian dari iman"
+                android:textStyle="italic" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Hadits Kedua: " />
+
+            <TextView
+                android:id="@+id/tv_hadits_dua"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Kebersihan sebagian dari iman"
+                android:textStyle="italic" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/colorPrimary" />
+
+            <LinearLayout
+                android:layout_marginTop="4dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/cek_similiarity"
+                    android:layout_marginRight="2dp"
+                    android:textSize="10sp"
+                    android:background="@color/colorPrimary"
+                    android:layout_width="0dp"
+                    android:textColor="@color/colorWhite"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="cek Similiarity"/>
+                <Button
+                    android:id="@+id/update"
+                    android:background="@color/colorPrimary"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textColor="@color/colorWhite"
+                    android:layout_height="wrap_content"
+                    android:text="Update"/>
+                <Button
+                    android:id="@+id/delete"
+                    android:background="@color/colorPrimary"
+                    android:layout_width="0dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="1"
+                    android:textColor="@color/colorWhite"
+                    android:layout_height="wrap_content"
+                    android:text="Delete"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>
