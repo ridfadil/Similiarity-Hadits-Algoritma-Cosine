@@ -11,6 +11,7 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.activeandroid.query.Select;
+import com.activeandroid.query.Update;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -46,7 +47,6 @@ public class UpdateHaditsActivity extends AppCompatActivity {
         etHaditsSatu.setText(haditsSatu);
         etHaditsDua.setText(haditsDua);
 
-        hadits = new Select().from(Hadits.class).where("id = ?", id).executeSingle();
 
         update.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -54,13 +54,14 @@ public class UpdateHaditsActivity extends AppCompatActivity {
                 if (!etJenisHadits.getText().toString().equals("")
                         && !etHaditsSatu.getText().toString().equals("")
                         && !etHaditsDua.getText().toString().equals("")) {
-                    hadits = new
-                            Hadits(
-                            etJenisHadits.getText().toString(),
-                            etHaditsSatu.getText().toString(),
-                            etHaditsDua.getText().toString()
-                    );
-                    hadits.save();
+                    String jenis = etJenisHadits.getText().toString();
+                    String hSatu = etHaditsSatu.getText().toString();
+                    String hDua = etHaditsDua.getText().toString();
+
+                    new Update(Hadits.class).set("Jenis=?", jenis).where("id = ?", id).execute();
+                    new Update(Hadits.class).set("HaditsSatu=?", hSatu).where("id = ?", id).execute();
+                    new Update(Hadits.class).set("HaditsDua=?", hDua).where("id = ?", id).execute();
+
                     Toast.makeText(UpdateHaditsActivity.this, "Berhasil Update", Toast.LENGTH_SHORT).show();
                     startActivity(new Intent(UpdateHaditsActivity.this, LihatHaditsActivity.class));
                 }
