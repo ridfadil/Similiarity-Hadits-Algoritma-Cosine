@@ -7,14 +7,14 @@
 
     <android.support.v7.widget.CardView
         android:id="@+id/cd_hadis"
-        android:layout_margin="8dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp">
 
         <LinearLayout
-            android:background="@color/colorGrey"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
             android:orientation="vertical"
             android:padding="8dp">
 
@@ -27,6 +27,7 @@
                 android:id="@+id/tv_jenis"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="right"
                 android:text="Hadits Tentang Kebaersihan" />
 
             <View
@@ -66,37 +67,39 @@
                 android:background="@color/colorPrimary" />
 
             <LinearLayout
-                android:layout_marginTop="4dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:layout_marginTop="4dp"
+                android:orientation="vertical">
+
                 <Button
                     android:id="@+id/cek_similiarity"
-                    android:layout_marginRight="2dp"
-                    android:textSize="10sp"
-                    android:background="@color/colorPrimary"
-                    android:layout_width="0dp"
-                    android:textColor="@color/colorWhite"
-                    android:layout_weight="1"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="cek Similiarity"/>
+                    android:layout_margin="4dp"
+                    android:layout_marginRight="2dp"
+                    android:background="@color/colorPrimary"
+                    android:text="cek Similiarity"
+                    android:textColor="@color/colorWhite" />
+
                 <Button
                     android:id="@+id/update"
-                    android:background="@color/colorPrimary"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:textColor="@color/colorWhite"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Update"/>
+                    android:layout_margin="4dp"
+                    android:background="@color/colorPrimary"
+                    android:text="Update"
+                    android:textColor="@color/colorWhite" />
+
                 <Button
                     android:id="@+id/delete"
-                    android:background="@color/colorPrimary"
-                    android:layout_width="0dp"
-                    android:layout_marginLeft="2dp"
-                    android:layout_weight="1"
-                    android:textColor="@color/colorWhite"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Delete"/>
+                    android:layout_margin="4dp"
+                    android:layout_marginLeft="2dp"
+                    android:background="@color/colorPrimary"
+                    android:text="Delete"
+                    android:textColor="@color/colorWhite" />
             </LinearLayout>
 
         </LinearLayout>
